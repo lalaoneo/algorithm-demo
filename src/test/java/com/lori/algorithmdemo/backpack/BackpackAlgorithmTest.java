@@ -19,13 +19,13 @@ public class BackpackAlgorithmTest {
 
         Collections.sort(locations);
 
-        // 背包容量
+        // 获取背包容量
         int backpackCapacity = BackpackAlgorithm.getBackpackCapacity();
 
         // 按步长划分的所有背包容量
         List<Integer> allBackpackCapacity = BackpackAlgorithm.getAllBackpackCapacity(backpackCapacity);
 
-        // 初始化二维数组第一行第一列值,值都为0,设置动态规划的边界
+        // 背包算法
         int[][] value = BackpackAlgorithm.getMatchLocations(locations,allBackpackCapacity);
 
         int i = value.length-1;
